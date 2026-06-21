@@ -22,7 +22,7 @@ st.write(
 @st.cache_data
 def load_data():
     df = pd.read_csv(
-        'data/clean/london_properties_with_borough.csv'
+        'data/clean/london_properties_with_borough.csv.gz', compression='gzip'
     )
     borough_afford = pd.read_csv(
         'data/clean/borough_affordability.csv'
